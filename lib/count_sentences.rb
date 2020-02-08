@@ -28,8 +28,7 @@ class String
 
   def count_sentences
     sentences = self.split(/!|\?|\./).delete_if do |chunk|
-      chunk.length > 0
-        return chunk
+        chunk.length > 0
       end
     end
     
