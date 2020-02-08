@@ -27,10 +27,12 @@ class String
   end
 
   def count_sentences
-    self.split(/!|\?|\./).collect do |sentence|
-      if sentence.length != 0
-        return sentence
+    sentences = self.split(/!|\?|\./).collect do |chunk|
+      if chunk.length > 0
+        return chunk
       end
     end
+    
+    return sentences.size
   end
 end
